@@ -1,0 +1,31 @@
+{
+  "name": "urlshortner",
+  "version": "1.0.0",
+  "description": "UrlShortner",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js "
+  },
+  "keywords": [
+    "Url",
+    "shortener",
+    "short"
+  ],
+  "author": "Shubham Bhardwaj",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-edge": "^1.0.0",
+    "mongoose": "^5.4.14",
+    "short-id": "0.1.0-1",
+    "shortid": "^2.2.14",
+    "valid-url": "^1.0.9"
+  },
+  "engines": {
+    "node": "6.5"
+  }
+}

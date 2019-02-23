@@ -1,0 +1,97 @@
+body{
+    font-size:20px;color:#212529;
+    font-family:Lora,'Times New Roman',serif
+}
+
+/*Page Header*/
+#mainNav{
+    overflow: hidden;
+    border-bottom:1px solid #e9ecef;
+    background-color: #2e1713;
+    font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+#mainNav .navbar-brand{
+    font-weight:800;
+    color: #2bffb7;
+}
+
+/* When navbar is to be used add an element to represent navbar in smaller screens
+#mainNav .navbar-toggler{
+    font-size:12px;font-weight:800;padding:13px;text-transform:uppercase;color:#343a40
+}
+*/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2bffb7;
+}
+.sticky + .content {
+    padding-bottom: 60px;
+}
+
+.url-input{
+    position:relative;
+    background-size: cover;
+    width:80%;
+    height: 40px;
+}
+.btn{
+    height: 40px;
+    margin: 0;
+    background: #aaeeff;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 900;
+}
+.btn:hover{
+    background-color: #5e85e9
+}
+
+
+/*Main Content*/
+.container{
+    position: static;
+}
+header.page-header{
+    margin-bottom:50px;
+    background:no-repeat center center;
+    /* link for image: https://www.printrunner.com/blog/wp-content/uploads/2016/09/10_UsingURLShorteners-777x437.jpg*/
+    background-image: url('../img/home-bg.jpg');
+
+    position:relative;
+    background-size:cover;
+}
+header.page-header .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:#212529;
+    opacity:.5
+}
+header.page-header .site-heading{
+    padding:200px 0 150px;
+    color:#fff;
+    text-align:center
+}
+
+
+
+
+@media only screen and (min-width:992px){
+    #mainNav{border-bottom:1px solid transparent;background:0 0}
+    #mainNav .navbar-brand{padding:10px 20px;color: #c2ffec
+    }
+    #mainNav .navbar-brand:focus,#mainNav .navbar-brand:hover{color: rgba(197, 252, 185, 0.8)
+    }
+    #mainNav .navbar-nav>li.nav-item>a{padding:10px 20px;color:#fff}
+    #mainNav .navbar-nav>li.nav-item>a:focus,#mainNav .navbar-nav>li.nav-item>a:hover{color:rgba(255,255,255,.8)}
+}
+
+
+
+
