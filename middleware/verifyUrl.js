@@ -3,21 +3,24 @@ const ShortUrl = require('../database/model/urlShortnerModel');
 const shortid = require('shortid');
 
 
-
-let hashing = function (url) {
-    const hash = shortid.generate();
-    return "localhost:8888/"+ hash;
-};
-
 module.exports = (req,res,next) => {
   if (validUrl.isUri(req.body.Url)){
+      const search = ShortUrl.findOne({Url:req.body.Url});
+      if(search){
+          console.log('already exists');
+          return res.redirect('/')
+      }
       //Reduce the url to display appropriately.
-      req.body.displayUrl = req.body.Url.substring(0,50) + '...';
-
+      if (req.body.Url.length > 50) {
+          req.body.displayUrl = req.body.Url.substring(0, 50) + '...';
+      }
+      else{
+          req.body.displayUrl = req.body.Url;
+      }
       //Generate shorter URL
       const hash = shortid.generate();
       req.body.hash = hash;
-      req.body.newUrl = "beep.boop/"+ hash;
+      req.body.newUrl = "fgethell.xyz:2124/"+ hash;
 
       //Initialize the value with 0
       req.body.visited = 0;
