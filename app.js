@@ -21,6 +21,8 @@ const homePageController = require('./controllers/homepage');
 const redirectController = require('./controllers/redirection');
 //Middlwares
 const urlVerifyMiddleware = require('./middleware/verifyUrl');
+const connectFlash = require('connect-flash');
+
 
 mongoose.connect('mongodb://localhost/UrlShortner');
 
