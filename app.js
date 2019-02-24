@@ -35,7 +35,7 @@ app.post('/urls/store' , urlVerifyMiddleware , storeUrlController);
 //Port listening on
 let port = process.env.PORT;
 if (port == null || port == " " ){
-   port = 8888;
+   port = 2124;
 }
 app.listen(port , function () {
    console.log('Server is started.');

@@ -24,33 +24,6 @@
   </head>
 
   <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="/">ShortenUrl</a>
-        <!-- Hidden as not much useful, can be used to control user login and stuff as required-->
-        <!--button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Register</a>
-            </li>
-          </ul>
-        </div-->
-      </div>
-    </nav>
-
     <!-- Page Header -->
     <header class="page-header">
       <div class="overlay"></div>
@@ -58,8 +31,9 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
+              <h1 class="header" >Simplify Links</h1>
               <form action="/urls/store" method="Post" enctype="application/json">
-                <input class="url-input" placeholder="Enter Url" name="Url">
+                <input class="url-input" id="input-form" placeholder="Enter Url" name="Url">
                 <button class="btn">GO</button>
               </form>
             </div>
@@ -81,8 +55,8 @@
             </tr>
             @each(url in urls)
             <tr>
-                <td><a href="/{{url.hash}}">{{url.displayUrl}}</a></td>
-                <td>{{url.newUrl}}</td>
+                <td><a href="/{{url.hash}}" target="_blank">{{url.displayUrl}}</a></td>
+                <td><a href="/{{url.hash}}" target="_blank">{{url.newUrl}}</a></td>
                 <td>{{url.createdOn}}</td>
                 <td>{{url.visited}}</td>
             </tr>
