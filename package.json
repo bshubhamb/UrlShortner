@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-edge": "^1.0.0",
     "mongoose": "^5.4.14",
     "short-id": "0.1.0-1",
